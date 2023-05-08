@@ -1,8 +1,8 @@
-const person = {
-    name : 'oz',
-    age : 19,
-    place :'null'
-};
-    //console.log(person.place)
-    let v = `my name is ${person.name}`;
-    console.log(v) 
+//creating an array of objects
+var cars  = ["supra","GTR","M4",04];
+console.log(cars.length);
+cars[4]="Mustag";
+cars.push("999");
+cars.pop();
+cars.shift();
+console.log(cars);
