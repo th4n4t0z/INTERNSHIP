@@ -1,22 +1,20 @@
-//1.importing express
-const express = require("express");
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
-//2.init installation
-const app =new express();
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <BrowserRouter>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+  </BrowserRouter>
+);
 
-app.use(express.urlencoded({extened:true}));
-app.use(express.json());
-//3. Api creation
-app.get('/',(req,res) => {
-    res.json("Hey where are you")
-})
-
-app.post('/sign',(req,res) =>{
-    res.send(`abc ${req.body.name}`)
-})
-
-//4.setting port
-app.listen(3005,()=>{
-    console.log("port 3005 is running");
-
-})
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
